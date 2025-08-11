@@ -24,18 +24,45 @@ namespace ExpenseTracker.Controllers
         public IActionResult Expenses()
         {
             var allExpenses = _context.Expenses.ToList();
+
+            var totalExpenses = allExpenses.Sum(x => x.Value);
+
             return View(allExpenses);
         }
 
-        public IActionResult CreateEditExpense()
+        public IActionResult CreateEditExpense(int? id)
         {
+            if(id != null)
+            {
+                // Load an expense by its ID for editing
+                var expenseInDb = _context.Expenses.SingleOrDefault(expense => expense.Id == id);
+                return View(expenseInDb);
+            }
+
             return View();
+        }
+
+        public IActionResult DeleteExpense(int id)
+        {
+            var expenseInDb = _context.Expenses.SingleOrDefault(expense => expense.Id == id);
+            _context.Expenses.Remove(expenseInDb);
+            _context.SaveChanges();
+            return RedirectToAction("Expenses");
         }
 
         public IActionResult CreateEditExpenseForm(Expense model)
         {
+            if(model.Id == 0)
+            {
+                // Create
+                _context.Expenses.Add(model);
+            }
+            else
+            {
+                // Edit
+                _context.Expenses.Update(model);
+            }
 
-            _context.Expenses.Add(model);
             _context.SaveChanges();
 
             return RedirectToAction("Expenses");
