@@ -27,6 +27,8 @@ namespace ExpenseTracker.Controllers
 
             var totalExpenses = allExpenses.Sum(x => x.Value);
 
+            ViewBag.Expenses = totalExpenses;
+
             return View(allExpenses);
         }
 
