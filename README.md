@@ -1,4 +1,4 @@
-# Expense Tracker 💼
+# Pennywise 🤡
 
 Expense Tracker is a lightweight and responsive web application built with C#, ASP.NET MVC, Entity Framework, and Bootstrap. It allows users to create, edit, and delete expenses, with a running total expenses value displayed dynamically.
 
@@ -7,7 +7,7 @@ Expense Tracker is a lightweight and responsive web application built with C#, A
 Use the following commands to clone and run the project:
 
 ```bash
-git clone https://github.com/alexlee94/expense-tracker.git
+git clone https://github.com/alexlee94/pennywise.git
 cd expense-tracker
 dotnet run
 ```
