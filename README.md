@@ -1,4 +1,4 @@
-# Expense Tracker 💰
+# 💰 Expense Tracker
 
 Expense Tracker is a lightweight and responsive web application built with C#, ASP.NET MVC, Entity Framework, and Bootstrap. It allows users to create, edit, and delete expenses, with a running total expenses value displayed dynamically.
 
