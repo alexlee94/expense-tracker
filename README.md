@@ -37,7 +37,3 @@ Thanks to the open-source tools and documentation that supported development:
 * [ASP.NET Core](https://learn.microsoft.com/aspnet/core/)
 * [Entity Framework Core](https://learn.microsoft.com/ef/core/)
 * [Bootstrap](https://getbootstrap.com/)
-
-## 📄 License
-
-[MIT](https://choosealicense.com/licenses/mit/)
